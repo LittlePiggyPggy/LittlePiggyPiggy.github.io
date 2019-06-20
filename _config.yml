@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://tinypigy.github.io
+url: https://tinypiggy.github.io
 date_format: "ordinal"
 title: tiny piggy
 subtitle: "探索未知"
