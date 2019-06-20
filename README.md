@@ -28,12 +28,12 @@ $ chmod 700 -R .ssh
 #第一个账号，默认使用的账号
 Host github.com
  HostName github.com
- User git
+ User user_1
  IdentityFile ~/.ssh/id_rsa
 # 第二个账号 kentsun
-Host kentsun.github.com # kentsun为前缀名，可以任意设置
+Host user_2.github.com # kentsun为前缀名，可以任意设置
  HostName github.com
- User git
+ User user_2
  IdentityFile ~/.ssh/kentsun_rsa
 ```
 3. 登录github在设置中添加公钥
@@ -61,4 +61,10 @@ git config –global –unset user.email
 # 单独设置每个repo 用户名/邮箱
 git config user.name "用户名"  //在config后加上--global即全局
 git config user.email "邮箱"
+```
+7. 特别注意, 现在clone的时候github域名要使用~/.ssh/congfig 中配置的host
+```shell
+$ git clone git@github.com:user_name_1/learngit.git
+
+$ git clone git@user_2.github.com:tinypiggy/learngit.git
 ```
