@@ -2,9 +2,9 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://tinypigy.github.io
+url: https://tinypiggy.github.io
 date_format: "ordinal"
-title: tiny piggy
+title: Tiny Piggy
 subtitle: "探索未知"
 description: "猪爸爸的博客"
 keywords: 探索, liuke, tinypiggy
@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: tinypiggy/tinypiggy.github.io
 
 # ---------------- #
 #      Comments    #
@@ -96,14 +96,14 @@ disqus:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: tinypiggy
-    repo: blog-comments
+    repo: tinypiggy.github.io
     oauth:
         client_id: 11267da7af72010eadad
         client_secret: e67fba77b3bd509b531632d1840e105e903fd3f8
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: tinypiggy
-    repo: blog-comments
+    repo: tinypiggy.github.io
     clientID: 11267da7af72010eadad
     clientSecret: e67fba77b3bd509b531632d1840e105e903fd3f8
 # 在使用其它评论组件时可点击显示 Disqus
