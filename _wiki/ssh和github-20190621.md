@@ -6,7 +6,7 @@ description: ssh免密登录和github多账号处理
 keywords: ssh, git， linux
 ---
 
-```
+
 ## 两台linux机器互相认证
 1. 登录 server A
 ```shell
