@@ -52,12 +52,13 @@ ssh-add id_rsa_second
 ssh-add -l
 ```
 5. 输入指令, 验证配置是否成功
-```
+```shell
 # @后面是config中配置的host
 $ ssh -T git@github.com
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 6. 取消全局配置
+
 ```shell
 # 取消全局 用户名/邮箱 配置
 git config –global –unset user.name
