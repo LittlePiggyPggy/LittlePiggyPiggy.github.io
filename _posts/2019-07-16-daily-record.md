@@ -13,7 +13,6 @@ keywords: JavaScript, float
 使用的两个关键函数如下：
 
 1. 保留两位小数的函数
-
 ```javascript
 	Number.prototype.toFixed = function(len)
 	{debugger;
@@ -29,9 +28,7 @@ keywords: JavaScript, float
 		return s/temp;
 	};
 ```
-
 2. 做乘法计算的函数
-
 ```javascript
 	var numMulti = function(num1, num2) {
 		var baseNum = 0; 
@@ -46,12 +43,8 @@ keywords: JavaScript, float
 		return Number(num1.toString().replace(".", "")) * Number(num2.toString().replace(".", "")) / Math.pow(10, baseNum); 
 	};
 ```
-
-3. 出错原因   
-
-   假设用户加200元油，单价6.42， 优惠价 5.62
-
-   ```javascript
+3. 出错原因    假设用户加200元油，单价6.42， 优惠价 5.62
+```javascript
    	input = 200
    	ori_price = 6.42
    	price = 5.62
@@ -64,8 +57,5 @@ keywords: JavaScript, float
    	// 调用toFixed函数时，24.939999999999998 需要进位
        // numMulti(24.939999999999998 * 100) 计算时 结果又变成 2495
        reduce = reduce.toFixed(2)
-   ```
-
-   
-
+```
 4. 浮点数运算需要精度时，应该都转换成 整形数据 运算，（java中也可以使用BigDecimal等），显示结果时才加上小数点，才能避免各种陷阱
