@@ -58,18 +58,15 @@ $ ssh -T git@github.com
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 6. 取消全局配置
-
 ```shell
 # 取消全局 用户名/邮箱 配置
 git config –global –unset user.name
 git config –global –unset user.email
-
 # 单独设置每个repo 用户名/邮箱
 git config user.name "用户名"  //在config后加上--global即全局
 git config user.email "邮箱"
 ```
 7. 特别注意, 现在clone的时候github域名要使用~/.ssh/congfig 中配置的host
-
 ```shell
 $ git clone git@github.com:user_1/learngit.git
 
