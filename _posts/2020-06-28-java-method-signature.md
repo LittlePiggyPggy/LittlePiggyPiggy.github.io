@@ -30,7 +30,6 @@ public class I {
     public int creatInt(int a, int b){
         return a + b;
     }
-
     public static void main(String[] args) {
         I o = new I();
         o.creatInt(1, 2);
@@ -39,22 +38,21 @@ public class I {
 // javap -verbose I.class
 //   public int creatInt(int, int);
 //     descriptor: (II)I
-
-// invokevirtual #11                 // Method creatInt:(II)I
+// invokevirtual #11           // Method creatInt:(II)I
 ```
 2. 每一个原始类型java都有一个固定的符号表示，如果参数是如果参数是一个对象，签名是L+参数类型全限定名，并用;分隔，如下
 ```java
     public List createList(List a, List b){
         return new ArrayList();
     }
-    //  invokevirtual #11            // Method createList:(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+    //  invokevirtual #11      // Method createList:(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 ```
 3. 如果参数是数组, 则在[ + 分数组参数的签名
 ```java
     public String createWithArray(String[] arr){
         return arr[0];
     }
-    // invokevirtual #14                 // Method createWithArray:([Ljava/lang/String;)Ljava/lang/String;
+    // invokevirtual #14        // Method createWithArray:([Ljava/lang/String;)Ljava/lang/String;
 ```
 ### 后记
 之所以想到要写java函数签名的文字，主要是我偶然发现字节码中使用 I 标记 int 类型，自然就想到如果一个没有package的class I要如何标记呢，于是用javap测试了一下，于是就看到了java的这个解决方案，特此记录一下。
