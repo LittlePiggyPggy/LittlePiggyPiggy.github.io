@@ -69,6 +69,5 @@ git config user.email "邮箱"
 7. 特别注意, 现在clone的时候github域名要使用~/.ssh/congfig 中配置的host
 ```shell
 $ git clone git@github.com:user_1/learngit.git
-
 $ git clone git@user_2.github.com:tinypiggy/learngit.git
 ```
